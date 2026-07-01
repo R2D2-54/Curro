@@ -1,6 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
-.vscode/
 /android/
 .vscode/launch.json
 .vscode/settings.json
