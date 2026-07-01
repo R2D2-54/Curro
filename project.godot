@@ -11,10 +11,7 @@ config_version=5
 [application]
 
 config/name="Curro"
-<<<<<<< Updated upstream
-=======
 run/main_scene="uid://c2f6nvidfyhhb"
->>>>>>> Stashed changes
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
