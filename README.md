@@ -1,2 +1,2 @@
 # Curro
-Curro need to save Trushka because a The Cat
+Curro in order to save Trushka who is capture for The Cat need to defead
