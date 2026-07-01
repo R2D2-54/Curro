@@ -1,3 +1,16 @@
 [gd_scene format=3 uid="uid://c2f6nvidfyhhb"]
 
+<<<<<<< Updated upstream
 [node name="Node2D" type="Node2D" unique_id=158086176]
+=======
+[ext_resource type="Script" uid="uid://safmya8dwk3p" path="res://Scripts/Character.cs" id="1_r5ka5"]
+[ext_resource type="Texture2D" uid="uid://bjnnv400kt3mu" path="res://Sprites/icon.svg" id="2_tdndw"]
+
+[node name="Gameplay" type="Node2D" unique_id=158086176]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1646904302]
+script = ExtResource("1_r5ka5")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D" unique_id=844266698]
+texture = ExtResource("2_tdndw")
+>>>>>>> Stashed changes

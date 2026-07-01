@@ -1,6 +1,10 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+<<<<<<< Updated upstream
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curro", "Curro.csproj", "{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curro", "Curro.csproj", "{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +13,20 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< Updated upstream
 		{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
 		{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
 		{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{7938BE0D-D204-4F22-9E25-C29BE44FE3EA}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+=======
+		{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{EB89B3F0-B7D1-4F51-AF6E-A49BCB56A205}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 EndGlobal
