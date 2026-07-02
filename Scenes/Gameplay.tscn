@@ -12,7 +12,7 @@ size = Vector2(1337, 108.5)
 [node name="Gameplay" type="Node2D" unique_id=158086176]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1646904302]
-position = Vector2(88, 80)
+position = Vector2(579, 80)
 script = ExtResource("1_r5ka5")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D" unique_id=844266698]
@@ -23,8 +23,7 @@ position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_h4t55")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1930121437]
-position = Vector2(579, 468)
+position = Vector2(579, 380)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1148838366]
-position = Vector2(30.5, -196.25)
 shape = SubResource("RectangleShape2D_8w0r3")
