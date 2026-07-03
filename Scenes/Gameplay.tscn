@@ -88,6 +88,7 @@ script = ExtResource("1_r5ka5")
 sprite_frames = SubResource("SpriteFrames_4e15o")
 autoplay = "default"
 frame_progress = 0.6759421
+flip_h = true
 
 [node name="BackLegCollision" type="CollisionShape2D" parent="CharacterBody2D" unique_id=86703767]
 position = Vector2(-13, 5)

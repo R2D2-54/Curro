@@ -25,6 +25,13 @@ public partial class Character : CharacterBody2D
         Velocity *= new Vector2(0.95f, 1f);
         
         MoveAndSlide();
+        Animation();
+    }
+
+    public void Animation()
+    {
+        if (Velocity.X < 0) GetNode<AnimatedSprite2D>("IdleAnimation").FlipH = true;
+        if (Velocity.X > 0) GetNode<AnimatedSprite2D>("IdleAnimation").FlipH = false;
     }
 
 }   
