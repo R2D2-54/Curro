@@ -4,9 +4,9 @@ public partial class Character : CharacterBody2D
 {
     private float speed = 1600f;
 
+
     public override void _PhysicsProcess(double delta)
     {
-
         // We made our own input direction 
         // This is a vector where X is -speed or speed depending if we press left or right
         Vector2 inputDirection = Vector2.Zero;
