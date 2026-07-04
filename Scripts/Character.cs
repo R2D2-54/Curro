@@ -1,22 +1,38 @@
+using System.Data.Common;
 using Godot;
 
 public partial class Character : CharacterBody2D
 {
     private float speed = 1600f;
+    private AnimatedSprite2D Curro;
 
     public override void _PhysicsProcess(double delta)
     {
         Movement(delta);
-        Animation();
+        Flip();
     }
 
     public void Movement(double delta)
     {
+        
+        Curro = GetNode<AnimatedSprite2D>("Animations");
         // We made our own input direction 
         // This is a vector where X is -speed or speed depending if we press left or right
+
+        // When moving in any x direction it play the correct animation while the character moves
         Vector2 inputDirection = Vector2.Zero;
-        if (Input.IsActionPressed("left")) inputDirection.X -= speed;
-        if (Input.IsActionPressed("right")) inputDirection.X += speed;
+        if (Input.IsActionPressed("left")) 
+        {
+            inputDirection.X -= speed;
+            Curro.Play("RunAnimation");
+        }
+        if (Input.IsActionPressed("right")) 
+        {
+            inputDirection.X += speed;
+            Curro.Play("RunAnimation");
+        }
+        // Make Character be in Idle animation if the player is not moving
+        if (Input.IsActionJustReleased("left") || Input.IsActionJustReleased("right")) Curro.Play("Idle");
 
         // This is the acceleration, it uses the input direction and gravity
         // It takes into account delta time, meaning that its now in p/s instead of p/frame
@@ -32,11 +48,15 @@ public partial class Character : CharacterBody2D
         MoveAndSlide();
     }
 
-    public void Animation()
+    public void Flip()
     {
-        // Flip the character based on Velocity
-        if (Velocity.X < 0) GetNode<AnimatedSprite2D>("IdleAnimation").FlipH = true;
-        if (Velocity.X > 0) GetNode<AnimatedSprite2D>("IdleAnimation").FlipH = false;
+        Curro = GetNode<AnimatedSprite2D>("Animations");
+        // In order to flip the the Character
+        if (Velocity.X > 0) Curro.FlipH = false;
+        if (Velocity.X < 0) Curro.FlipH = true;
+        // This is only for make the animation play when the game start
+        if (Velocity.X == 0) Curro.Play("Idle");
+
     }
 
-}   
+}

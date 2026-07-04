@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2f6nvidfyhhb"]
 
 [ext_resource type="Script" uid="uid://safmya8dwk3p" path="res://Scripts/Character.cs" id="1_r5ka5"]
+[ext_resource type="Texture2D" uid="uid://c01wfgwbxs5up" path="res://Sprites/CurroSprites/CurroAnimations/CurrorRun-Sheet.png" id="2_ovofm"]
 [ext_resource type="Texture2D" uid="uid://fdida6u0o6la" path="res://Sprites/CurroSprites/CurroAnimations/Curro ide sprite-Sheet.png" id="2_tdndw"]
 [ext_resource type="Texture2D" uid="uid://cfmhi83q5jyx3" path="res://Sprites/Pared basica espacial.png" id="3_tdndw"]
 
@@ -32,6 +33,30 @@ region = Rect2(320, 0, 64, 64)
 atlas = ExtResource("2_tdndw")
 region = Rect2(384, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfeic"]
+atlas = ExtResource("2_ovofm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5l26"]
+atlas = ExtResource("2_ovofm")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wr7o"]
+atlas = ExtResource("2_ovofm")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5klrq"]
+atlas = ExtResource("2_ovofm")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aia5"]
+atlas = ExtResource("2_ovofm")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buxyy"]
+atlas = ExtResource("2_ovofm")
+region = Rect2(320, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4e15o"]
 animations = [{
 "frames": [{
@@ -57,8 +82,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_vu60g")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"Idle",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfeic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5l26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wr7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5klrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aia5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buxyy")
+}],
+"loop": 1,
+"name": &"RunAnimation",
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8w0r3"]
@@ -84,14 +132,13 @@ size = Vector2(438, 104.25)
 position = Vector2(594, 295)
 script = ExtResource("1_r5ka5")
 
-[node name="IdleAnimation" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=216767165]
+[node name="Animations" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=216767165]
 sprite_frames = SubResource("SpriteFrames_4e15o")
-autoplay = "default"
-frame_progress = 0.6759421
-flip_h = true
+animation = &"Idle"
+frame_progress = 0.67059255
 
 [node name="BackLegCollision" type="CollisionShape2D" parent="CharacterBody2D" unique_id=86703767]
-position = Vector2(-13, 5)
+position = Vector2(-15, 6)
 shape = SubResource("CircleShape2D_8w0r3")
 
 [node name="FrontLegCollition" type="CollisionShape2D" parent="CharacterBody2D" unique_id=910616119]
