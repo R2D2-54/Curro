@@ -4,8 +4,13 @@ public partial class Character : CharacterBody2D
 {
     private float speed = 1600f;
 
-
     public override void _PhysicsProcess(double delta)
+    {
+        Movement(delta);
+        Animation();
+    }
+
+    public void Movement(double delta)
     {
         // We made our own input direction 
         // This is a vector where X is -speed or speed depending if we press left or right
@@ -25,11 +30,11 @@ public partial class Character : CharacterBody2D
         Velocity *= new Vector2(0.95f, 1f);
         
         MoveAndSlide();
-        Animation();
     }
 
     public void Animation()
     {
+        // Flip the character based on Velocity
         if (Velocity.X < 0) GetNode<AnimatedSprite2D>("IdleAnimation").FlipH = true;
         if (Velocity.X > 0) GetNode<AnimatedSprite2D>("IdleAnimation").FlipH = false;
     }
