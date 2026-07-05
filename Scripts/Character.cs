@@ -31,6 +31,7 @@ public partial class Character : CharacterBody2D
             inputDirection.X += speed;
             Curro.Play("RunAnimation");
         }
+
         // Make Character be in Stoping animation if the player is stoping moving
         if (Input.IsActionJustReleased("left") || Input.IsActionJustReleased("right")) Curro.Play("Stoping");
 
@@ -55,8 +56,7 @@ public partial class Character : CharacterBody2D
         if (Velocity.X > 0) Curro.FlipH = false;
         if (Velocity.X < 0) Curro.FlipH = true;
         // This is only for make the animation play when the game start
-        if (Velocity.X == 0) Curro.Play("Idle");
-
+        if (Velocity.X == 0 && Velocity.Y == 0) Curro.Play("Idle");
     }
 
 }
