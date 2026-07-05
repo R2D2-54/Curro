@@ -31,8 +31,8 @@ public partial class Character : CharacterBody2D
             inputDirection.X += speed;
             Curro.Play("RunAnimation");
         }
-        // Make Character be in Idle animation if the player is not moving
-        if (Input.IsActionJustReleased("left") || Input.IsActionJustReleased("right")) Curro.Play("Idle");
+        // Make Character be in Stoping animation if the player is stoping moving
+        if (Input.IsActionJustReleased("left") || Input.IsActionJustReleased("right")) Curro.Play("Stoping");
 
         // This is the acceleration, it uses the input direction and gravity
         // It takes into account delta time, meaning that its now in p/s instead of p/frame

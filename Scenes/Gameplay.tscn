@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://safmya8dwk3p" path="res://Scripts/Character.cs" id="1_r5ka5"]
 [ext_resource type="Texture2D" uid="uid://c01wfgwbxs5up" path="res://Sprites/CurroSprites/CurroAnimations/CurrorRun-Sheet.png" id="2_ovofm"]
 [ext_resource type="Texture2D" uid="uid://fdida6u0o6la" path="res://Sprites/CurroSprites/CurroAnimations/Curro ide sprite-Sheet.png" id="2_tdndw"]
-[ext_resource type="Texture2D" uid="uid://cfmhi83q5jyx3" path="res://Sprites/Pared basica espacial.png" id="3_tdndw"]
+[ext_resource type="Texture2D" uid="uid://d0std3yhuif7f" path="res://Sprites/CurroSprites/CurroAnimations/CurroStoping-Sheet.png" id="4_mofsa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovofm"]
 atlas = ExtResource("2_tdndw")
@@ -57,6 +57,22 @@ region = Rect2(256, 0, 64, 64)
 atlas = ExtResource("2_ovofm")
 region = Rect2(320, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaqk3"]
+atlas = ExtResource("4_mofsa")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbnsi"]
+atlas = ExtResource("4_mofsa")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upsvf"]
+atlas = ExtResource("4_mofsa")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24v7v"]
+atlas = ExtResource("4_mofsa")
+region = Rect2(256, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4e15o"]
 animations = [{
 "frames": [{
@@ -107,6 +123,26 @@ animations = [{
 "loop": 1,
 "name": &"RunAnimation",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_qaqk3")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_rbnsi")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_upsvf")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_24v7v")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_qaqk3")
+}],
+"loop": 0,
+"name": &"Stoping",
+"speed": 11.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8w0r3"]
@@ -124,7 +160,7 @@ radius = 6.0
 height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
-size = Vector2(438, 104.25)
+size = Vector2(1504, 104.25)
 
 [node name="Gameplay" type="Node2D" unique_id=158086176]
 
@@ -134,8 +170,9 @@ script = ExtResource("1_r5ka5")
 
 [node name="Animations" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=216767165]
 sprite_frames = SubResource("SpriteFrames_4e15o")
-animation = &"Idle"
-frame_progress = 0.67059255
+animation = &"Stoping"
+frame = 3
+frame_progress = 1.0
 
 [node name="BackLegCollision" type="CollisionShape2D" parent="CharacterBody2D" unique_id=86703767]
 position = Vector2(-15, 6)
@@ -159,11 +196,4 @@ shape = SubResource("CapsuleShape2D_4e15o")
 position = Vector2(579, 380)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1148838366]
-position = Vector2(-2, 2.125)
 shape = SubResource("RectangleShape2D_8w0r3")
-
-[node name="ParedBasicaEspacial" type="Sprite2D" parent="StaticBody2D" unique_id=1393268137]
-position = Vector2(4.799988, 3.3703747)
-rotation = 4.712389
-scale = Vector2(6.514896, 7.076701)
-texture = ExtResource("3_tdndw")

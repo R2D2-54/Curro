@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfmhi83q5jyx3"
-path="res://.godot/imported/Pared basica espacial.png-5bfeb31fa8e11db48bfd94141230528d.ctex"
+uid="uid://d0std3yhuif7f"
+path="res://.godot/imported/CurroStoping-Sheet.png-1ea3b4c47124e5162f306fc4fca2a9ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Pared basica espacial.png"
-dest_files=["res://.godot/imported/Pared basica espacial.png-5bfeb31fa8e11db48bfd94141230528d.ctex"]
+source_file="res://Sprites/CurroSprites/CurroAnimations/CurroStoping-Sheet.png"
+dest_files=["res://.godot/imported/CurroStoping-Sheet.png-1ea3b4c47124e5162f306fc4fca2a9ec.ctex"]
 
 [params]
 
