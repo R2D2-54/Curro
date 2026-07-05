@@ -13,7 +13,6 @@ config_version=5
 config/name="Curro"
 run/main_scene="uid://c2f6nvidfyhhb"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="res://Sprites/icon.svg"
 
 [display]
 

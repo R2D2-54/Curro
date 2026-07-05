@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c2f6nvidfyhhb"]
 
+[ext_resource type="Texture2D" uid="uid://ddbmkpljeckp7" path="res://Sprites/Scenery/Forest/forest normal completefloor.png" id="1_mofsa"]
 [ext_resource type="Script" uid="uid://safmya8dwk3p" path="res://Scripts/Character.cs" id="1_r5ka5"]
 [ext_resource type="Texture2D" uid="uid://c01wfgwbxs5up" path="res://Sprites/CurroSprites/CurroAnimations/CurrorRun-Sheet.png" id="2_ovofm"]
 [ext_resource type="Texture2D" uid="uid://fdida6u0o6la" path="res://Sprites/CurroSprites/CurroAnimations/Curro ide sprite-Sheet.png" id="2_tdndw"]
@@ -160,19 +161,17 @@ radius = 6.0
 height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
-size = Vector2(1504, 104.25)
+size = Vector2(2274, 60)
 
 [node name="Gameplay" type="Node2D" unique_id=158086176]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1646904302]
-position = Vector2(594, 295)
+position = Vector2(523, 512)
 script = ExtResource("1_r5ka5")
 
 [node name="Animations" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=216767165]
 sprite_frames = SubResource("SpriteFrames_4e15o")
-animation = &"Stoping"
-frame = 3
-frame_progress = 1.0
+animation = &"Idle"
 
 [node name="BackLegCollision" type="CollisionShape2D" parent="CharacterBody2D" unique_id=86703767]
 position = Vector2(-15, 6)
@@ -184,7 +183,7 @@ shape = SubResource("CircleShape2D_h4t55")
 
 [node name="FaceCollition" type="CollisionShape2D" parent="CharacterBody2D" unique_id=443580267]
 position = Vector2(21, -9)
-rotation = -1.8797196
+rotation = -1.548107
 shape = SubResource("CapsuleShape2D_h4t55")
 
 [node name="BoodyCollition" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1711855415]
@@ -193,7 +192,12 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_4e15o")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1930121437]
-position = Vector2(579, 380)
+position = Vector2(545, 286)
+
+[node name="ForestNormalCompletefloor" type="Sprite2D" parent="StaticBody2D" unique_id=490977386]
+position = Vector2(31, 38)
+texture = ExtResource("1_mofsa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1148838366]
+position = Vector2(-15, 286)
 shape = SubResource("RectangleShape2D_8w0r3")
